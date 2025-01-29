@@ -33,5 +33,7 @@ public class BusquedaBinaria {
         int[] arreglo = {1, 3, 5, 7, 9, 11, 13};
         int objetivo = 7;
 
+        System.out.println(busquedaBinaria(arreglo, objetivo));
+
     }
 }
