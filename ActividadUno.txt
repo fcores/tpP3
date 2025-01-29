@@ -1,0 +1,19 @@
+Comparación entre Python y Java
+
+Python y Java son dos lenguajes de programación populares, pero con enfoques diferentes.
+Python es más sencillo y flexible, mientras que Java es más estructurado y eficiente en rendimiento.
+
+Diferencias principales
+	•	Facilidad de uso: Python tiene una sintaxis simple y clara, ideal para principiantes. Java es más estricto y estructurado, útil para proyectos grandes.
+	•	Velocidad: Java es más rápido porque se compila en bytecode y se ejecuta en la JVM. Python es interpretado, lo que lo hace más lento.
+	•	Paradigma: Python es multiparadigma (POO, funcional e imperativo), mientras que Java es principalmente orientado a objetos.
+	•	Aplicaciones: Python es común en ciencia de datos, IA y desarrollo web. Java es usado en aplicaciones empresariales, móviles (Android) y sistemas escalables.
+	•	Concurrencia: Java maneja mejor los procesos multihilo; Python tiene limitaciones por el GIL.
+
+Conclusión
+
+Python es ideal para desarrollo rápido y aplicaciones de análisis de datos. Java es mejor para sistemas robustos y escalables.
+
+Fuente Consultada
+	•	ChatGPT (actualizado a 2025).
+	•	Documentación oficial de Python y Java.
