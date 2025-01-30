@@ -52,5 +52,25 @@ public class MergeSort {
             arreglo[k++] = derecha[j++];
         }
     }
+    // Método principal para probar el QuickSort
+    public static void main(String[] args) {
+        int[] arreglo = {10, 7, 8, 9, 1, 5};
+        System.out.println("Arreglo original:");
+        imprimirArreglo(arreglo);
+
+        // Ordenar el arreglo usando QuickSort
+        mergeSort(arreglo);
+
+        System.out.println("Arreglo ordenado:");
+        imprimirArreglo(arreglo);
+    }
+
+    // Método para imprimir un arreglo
+    private static void imprimirArreglo(int[] arreglo) {
+        for (int num : arreglo) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
 
 }
