@@ -97,21 +97,19 @@ public class Actividad3 {
 			List<Facturacion> resumenSinMap = generarResumen_SinMap(facturas_1, clientes_1);
 			Imprimir(resumenSinMap);
 
-		List<Factura> facturas_2 = List.of(
-            new Factura(1, 104, 250.0),
-            new Factura(2, 105, 100.0),
-            new Factura(3, 104, 300.0),
-            new Factura(4, 106, 200.0),
-            new Factura(5, 105, 100.0)
-        );
+		List<Factura> facturas_2 = new ArrayList<>();
+            facturas_2.add(new Factura(1, 104, 250.0));
+            facturas_2.add(new Factura(2, 105, 100.0));
+            facturas_2.add(new Factura(3, 104, 300.0));
+            facturas_2.add(new Factura(4, 106, 200.0));
+            facturas_2.add(new Factura(5, 105, 100.0));
 
-        List<Cliente> clientes = List.of(
-            new Cliente(104, "Romina"),
-            new Cliente(105, "Maria"),
-            new Cliente(106, "Graciela")
-        );
+        List<Cliente> clientes_2 = new ArrayList<>();
+            clientes_2.add(new Cliente(104, "Romina"));
+            clientes_2.add(new Cliente(105, "Maria"));
+            clientes_2.add(new Cliente(106, "Graciela"));
 
-        List<Facturacion> resumenConMap = generarResumen_ConMap(facturas_2, clientes);
+        List<Facturacion> resumenConMap = generarResumen_ConMap(facturas_2, clientes_2);
         Imprimir(resumenConMap);
 	}
 	
