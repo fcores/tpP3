@@ -66,8 +66,14 @@ public class Actividad3 {
             sumaImportes.put(factura.idCliente, sumaImportes.getOrDefault(factura.idCliente, 0.0) + factura.importe);
         }
 
-        List<Facturacion> resumen = new ArrayList<>();
+        Map<Integer, Cliente> clientesMap = new HashMap<>();
         for (Cliente cliente : clientes) {
+            clientesMap.put(cliente.idCliente, cliente);
+        }
+
+        List<Facturacion> resumen = new ArrayList<>();
+        for (Map.Entry<Integer, Cliente> entry : clientesMap.entrySet()) {
+            Cliente cliente = entry.getValue();
             double total = sumaImportes.getOrDefault(cliente.idCliente, 0.0);
             resumen.add(new Facturacion(cliente.idCliente, cliente.nombre, total));
         }
