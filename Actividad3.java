@@ -87,33 +87,33 @@ public class Actividad3 {
 			}
 		}
 	
-		public static void main(String[] args) {
-			List<Factura> facturas_1 = new ArrayList<>();
-			facturas_1.add(new Factura(1, 101, 500.0));
-			facturas_1.add(new Factura(2, 102, 300.0));
-			facturas_1.add(new Factura(3, 101, 200.0));
-			facturas_1.add(new Factura(4, 103, 400.0));
-			facturas_1.add(new Factura(5, 102, 100.0));
+	public static void main(String[] args) {
+		List<Factura> facturas_1 = new ArrayList<>();
+		facturas_1.add(new Factura(1, 101, 500.0));
+		facturas_1.add(new Factura(2, 102, 300.0));
+		facturas_1.add(new Factura(3, 101, 200.0));
+		facturas_1.add(new Factura(4, 103, 400.0));
+		facturas_1.add(new Factura(5, 102, 100.0));
 	
-			List<Cliente> clientes_1 = new ArrayList<>();
-			clientes_1.add(new Cliente(101, "Facundo"));
-			clientes_1.add(new Cliente(102, "Gabriel"));
-			clientes_1.add(new Cliente(103, "Octavio"));
+		List<Cliente> clientes_1 = new ArrayList<>();
+		clientes_1.add(new Cliente(101, "Facundo"));
+		clientes_1.add(new Cliente(102, "Gabriel"));
+		clientes_1.add(new Cliente(103, "Octavio"));
 			
-			List<Facturacion> resumenSinMap = generarResumen_SinMap(facturas_1, clientes_1);
-			Imprimir(resumenSinMap);
+		List<Facturacion> resumenSinMap = generarResumen_SinMap(facturas_1, clientes_1);
+		Imprimir(resumenSinMap);
 
-		List<Factura> facturas_2 = new ArrayList<>();
-            facturas_2.add(new Factura(1, 104, 250.0));
-            facturas_2.add(new Factura(2, 105, 100.0));
-            facturas_2.add(new Factura(3, 104, 300.0));
-            facturas_2.add(new Factura(4, 106, 200.0));
-            facturas_2.add(new Factura(5, 105, 100.0));
+	    List<Factura> facturas_2 = new ArrayList<>();
+        facturas_2.add(new Factura(1, 104, 250.0));
+        facturas_2.add(new Factura(2, 105, 100.0));
+        facturas_2.add(new Factura(3, 104, 300.0));
+        facturas_2.add(new Factura(4, 106, 200.0));
+        facturas_2.add(new Factura(5, 105, 100.0));
 
         List<Cliente> clientes_2 = new ArrayList<>();
-            clientes_2.add(new Cliente(104, "Romina"));
-            clientes_2.add(new Cliente(105, "Maria"));
-            clientes_2.add(new Cliente(106, "Graciela"));
+        clientes_2.add(new Cliente(104, "Romina"));
+        clientes_2.add(new Cliente(105, "Maria"));
+        clientes_2.add(new Cliente(106, "Graciela"));
 
         List<Facturacion> resumenConMap = generarResumen_ConMap(facturas_2, clientes_2);
         Imprimir(resumenConMap);
