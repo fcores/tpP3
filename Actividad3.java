@@ -47,38 +47,38 @@ class Facturacion {
 public class Actividad3 {
 	
 	public static List<Facturacion> generarResumen_SinMap(List<Factura> facturas, List<Cliente> clientes) {
-		List<Facturacion> resumen = new ArrayList<>();
-		for (Cliente cliente : clientes) {
+		List<Facturacion> resumen = new ArrayList<>(); //1
+		for (Cliente cliente : clientes) { //1 + 2(n+1) + n = 3n + 3 
 	    double total = 0;
-	    	for (Factura factura : facturas) {
-	    		if (factura.idCliente == cliente.idCliente) {
-	    			total += factura.importe;
+	    	for (Factura factura : facturas) { //1 + 2(n+1) + n = 3n + 3 
+	    		if (factura.idCliente == cliente.idCliente) { //1
+	    			total += factura.importe; //2n
 	    		}
 	    	}
-	    	resumen.add(new Facturacion(cliente.idCliente, cliente.nombre, total));
+	    	resumen.add(new Facturacion(cliente.idCliente, cliente.nombre, total)); //1
 	    }
-		return resumen;
+		return resumen;//1
 	}
 
 	public static List<Facturacion> generarResumen_ConMap(List<Factura> facturas, List<Cliente> clientes) {
-        Map<Integer, Double> sumaImportes = new HashMap<>();
-        for (Factura factura : facturas) {
-            sumaImportes.put(factura.idCliente, sumaImportes.getOrDefault(factura.idCliente, 0.0) + factura.importe);
+        Map<Integer, Double> sumaImportes = new HashMap<>(); //1
+        for (Factura factura : facturas) {//1 + 2(n+1) + n = 3n + 3 
+            sumaImportes.put(factura.idCliente, sumaImportes.getOrDefault(factura.idCliente, 0.0) + factura.importe); //1
         }
 
-        Map<Integer, Cliente> clientesMap = new HashMap<>();
-        for (Cliente cliente : clientes) {
-            clientesMap.put(cliente.idCliente, cliente);
+        Map<Integer, Cliente> clientesMap = new HashMap<>(); //1
+        for (Cliente cliente : clientes) {//1 + 2(n+1) + n = 3n + 3 
+            clientesMap.put(cliente.idCliente, cliente);//1
         }
 
         List<Facturacion> resumen = new ArrayList<>();
-        for (Map.Entry<Integer, Cliente> entry : clientesMap.entrySet()) {
-            Cliente cliente = entry.getValue();
-            double total = sumaImportes.getOrDefault(cliente.idCliente, 0.0);
-            resumen.add(new Facturacion(cliente.idCliente, cliente.nombre, total));
+        for (Map.Entry<Integer, Cliente> entry : clientesMap.entrySet()) {//1 + 2(n+1) + n = 3n + 3 
+            Cliente cliente = entry.getValue(); //1
+            double total = sumaImportes.getOrDefault(cliente.idCliente, 0.0); //1
+            resumen.add(new Facturacion(cliente.idCliente, cliente.nombre, total)); //1
         }
 
-        return resumen;
+        return resumen; //1
     }
 
 	public static void Imprimir(List<Facturacion> resumen) {

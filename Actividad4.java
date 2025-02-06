@@ -3,7 +3,7 @@ import java.math.BigInteger;
 public class Actividad4 {
     public static long factorialLong(long numero) {
         if (numero < 0) {
-            throw new IllegalArgumentException("El factorial no está definido para números negativos.");
+            throw new IllegalArgumentException("El factorial no está definido para números negativos."); 
         } else if (numero == 0) {
             return 1;
         } else {
