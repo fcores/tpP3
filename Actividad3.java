@@ -58,6 +58,16 @@ public class Actividad3 {
 	    	resumen.add(new Facturacion(cliente.idCliente, cliente.nombre, total)); //1
 	    }
 		return resumen;//1
+
+        //f(n) = 1 + 3 + 3n + n ( 3 + 3n + 1 + 2n ) + 1 + 1 = 5 + 3n + n (4 + 5n )
+        //f(n) = 5 + 3n + 4n + 5n^2 = 5 + 7n + 5 n^2
+        //demostracion
+        // 5 + 7n + 5 n^2 <= c x n^2
+        // 5/n^2 + 7/n + 5 <= c
+        // si n =1
+        // 5 + 7 + 5 <= c
+        // c = 17
+        // f(n) = 5 + 7n + 5 n^2 pertenece a O(n´2) para c= 17 y n0=1
 	}
 
 	public static List<Facturacion> generarResumen_ConMap(List<Factura> facturas, List<Cliente> clientes) {
