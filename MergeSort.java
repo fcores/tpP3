@@ -1,5 +1,3 @@
-package clase3;
-
 public class MergeSort {
 
     // Método principal que ordena el arreglo

@@ -1,5 +1,3 @@
-package clase3;
-
 public class QuickSort {
 
     // Método principal para realizar QuickSort utilizando Divide y Vencerás

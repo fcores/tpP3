@@ -1,4 +1,12 @@
-package clase3;
+class TreeNode {
+    int value;
+    TreeNode left, right;
+
+    public TreeNode(int value) {
+        this.value = value;
+        left = right = null;
+    }
+}
 
 public class BinarySearchTree {
 
@@ -42,15 +50,5 @@ public class BinarySearchTree {
         root.right.right.right = new TreeNode(30);
 
         System.out.println(getHeight(root));
-    }
-}
-
-class TreeNode {
-    int value;
-    TreeNode left, right;
-
-    public TreeNode(int value) {
-        this.value = value;
-        left = right = null;
     }
 }

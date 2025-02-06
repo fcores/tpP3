@@ -1,5 +1,3 @@
-package clase2;
-
 public class BusquedaBinaria {
 
     // Método para realizar la búsqueda binaria
